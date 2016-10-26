@@ -16,6 +16,13 @@ there is no configuration file since its a very small program
 any changes can be directly made in /usr/bin/wallee executable
 TIME for time interval
 DIR for directory of wallpaper
+######################################################
+Install
 
+Please install feh before installing
+run the install.sh from its directory like
+
+cd wallee
+./install.sh
 
 
