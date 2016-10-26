@@ -5,21 +5,21 @@
 
 
 #set the directory from where wallpapers are to be choosed 
-directory="$HOME/.config/wallee"
+DIR="$HOME/.config/wallee"
 
 #set the time interval for transition of wallpaper in minutes
-time=2
+TIME=2
 
 cd $director
 
 while true
 	do
-		for f in $directory/*
+		for f in $DIR/*
 			do
 		
 				`exec feh --bg-fill "$f"`
 		
-				sleep $[ $time*60 ]
+				sleep $[ $TIME*60 ]
 			done
 	done
 
