@@ -20,9 +20,10 @@ DIR for directory of wallpaper
 Install
 
 Please install feh before installing
+
 run the install.sh from its directory like
 
-cd wallee
+cd wallee  
 ./install.sh
 
 
