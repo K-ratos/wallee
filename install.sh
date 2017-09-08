@@ -28,7 +28,7 @@ elif [ $shell = "/bin/zsh" ]
 then
 `echo "killall wallee" >> $HOME/.zlogout`
 else
-echo "Please add 'killall wallee to your logout script of shell'"
+echo "Please add 'killall wallee' to your logout script of shell"
 fi
 else
 echo "Error : dependency error"
