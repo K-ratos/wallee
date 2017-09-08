@@ -10,9 +10,8 @@ DIR="$HOME/.config/wallee"
 #set the time interval for transition of wallpaper in minutes
 TIME=2
 
-cd $director
-
 while true
+
 	do
 		for f in $DIR/*
 			do
