@@ -1,26 +1,34 @@
 #!/bin/bash
-
-
 #################################################################
-
-
 #set the directory from where wallpapers are to be choosed 
 DIR="$HOME/.config/wallee"
-
-#set the time interval for transition of wallpaper in minutes
+#set the time interval for transition of wallpaper
 TIME=2
+#time unit for wallpaper transition [HOUR,MIN,SEC]
+UNIT=MIN
+#pick random order
+RANDOM=true
 
-while true
+function feh_bg {
+  `exec feh --bg-fill "$1"`
+  if [[ "$UNIT" == "HOUR" ]]; then
+    sleep $[ $TIME*3600 ]
+  elif [[ "$UNIT" == "MIN" ]]; then
+    sleep $[ $TIME*60 ]
+  else
+    sleep $TIME
+  fi
+}
 
-	do
-		for f in $DIR/*
-			do
-		
-				`exec feh --bg-fill "$f"`
-		
-				sleep $[ $TIME*60 ]
-			done
-	done
-
-
+while true; do
+  if [[ "$RANDOM" ]]; then
+    ls $DIR | sort -R | while read f; do
+      feh_bg $f
+    done
+  else
+    for f in $DIR/*; do
+      feh_bg $f
+    done
+  fi
+done
 ###################################################################
