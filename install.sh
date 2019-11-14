@@ -23,7 +23,7 @@ mkdir ~/.config/wallee
 echo "wallee has been installed Restart your i3 to see the changes"
 if [ $shell = "/bin/bash" ]
 then
-`echo "killall wallee" >> $HOME/.bash_logout
+`echo "killall wallee" >> $HOME/.bash_logout`
 elif [ $shell = "/bin/zsh" ]
 then
 `echo "killall wallee" >> $HOME/.zlogout`
